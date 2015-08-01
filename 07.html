@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Pacificano v0.07</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+
+		.landingDiv {
+			background-image: url("splash-oceanRocks.JPG");
+			background-size: cover;
+			padding-top: 130px;
+		}
+
+		.servicesDiv {
+			background-image: url("splash-pinkSky.JPG");
+			background-size: cover;
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		.aboutDiv {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		.testimonialDiv {
+			background-color: lightblue;
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.white {
+			color: white;
+		}
+
+		.whitebg {
+			background-color: white;
+			opacity: 0.9;
+			border-radius: 20px;
+		}
+
+		.whitebgServices {
+			background-color: white;
+			opacity: 0.8;
+			border-radius: 10px;
+			padding: 20px;
+			margin: 0px;
+		}
+
+		.newsletterDiv {
+			padding: 0px 30px;
+		}
+
+		.fullWidth {
+			width: 100%;
+		}
+
+		.dropShadow {
+			text-shadow: 0px 0px 10px black;
+		}
+
+    </style>
+
+  </head>
+  <body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+    	
+    	<div class="container">
+    		
+    		<div class="navbar-header">
+    			
+    			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+    				<span class="sr-only">Toggle navigation</span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+
+    			</button>
+
+    			<a class="navbar-brand" href="#">Pacificano</a>
+
+    		</div>
+
+    		<div class="navbar-collapse collapse navbar-right" id="navbar">
+    			
+    			<ul class="nav navbar-nav">
+
+    				<li class="active"><a href="#">Home</a></li>
+    				<li class="dropdown">
+
+    					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspop="true" aria-expanded="false">Our Services <span class="caret"></span></a>
+
+    					<ul class="dropdown-menu">
+	    					<li><a href="#hosting">Hosting & Domains</a></li>
+		    				<li><a href="#wordpress">Wordpress Templates</a></li>
+		    				<li><a href="#mobile">Mobile & Web Apps</a></li>
+		    				<li><a href="#javascript">Javascript Development</a></li>
+		    				<li><a href="#seo">SEO</a></li>
+    					</ul>
+
+    				</li>
+    				<li><a href="#blog">Our Blog</a></li>
+    				<li class="dropdown">
+    					
+    					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspop="true" aria-expanded="false">Contact <span class="caret"></span></a>
+
+    					<ul class="dropdown-menu">
+    						<li><a href="#email">Email</a></li>
+	    					<li><a href="https://www.twitter.com/pacificano_au">Twitter</a></li>
+		    				<li><a href="https://github.com/pacificano">Github</a></li>
+		    				<li><a href="https://www.reddit.com/user/pacificano_au/">Reddit</a></li>
+    					</ul>
+
+    				</li>
+
+    			</ul>
+
+    		</div>
+
+    	</div>
+
+    </nav>
+
+	<!-- LANDING DIV -->
+    <div class="container-fluid landingDiv splashDiv">
+
+    	<div class="container">
+    	
+	    	<div class="row">
+	    		
+	    		<div class="col-md-6 white">
+	    			
+	    			<h1 style="font-size: 500%;" class="dropShadow">A Fresh Approach to Web Hosting</h1>
+					<h3 class="dropShadow">All our web hosting packages are 100% carbon neutral, with 5-star customer service as standard.</h3>
+
+	    		</div>
+
+	    		<!-- Newsletter Sign Up -->
+	    		<div class="col-md-5 col-md-offset-1 whitebg newsletterDiv">
+
+	    			<img src="images/news.png" width="300px" height="100px">	
+					<h1>Learn how to grow your online business</h1>
+					<h3>Subscribe to our monthly newsletter</h3>
+
+					<div class="form-group">
+							
+							<label form="name">Your name</label>
+							<input type="text" name="name" class="form-control" placeholder="Your name" value="<?php echo $_POST['name']; ?>">
+
+					</div>
+
+					<div class="form-group">
+							
+							<label form="email">Your email</label>
+							<input type="email" name="email" class="form-control" placeholder="Your email" value="<?php echo $_POST['email']; ?>">
+
+					</div>
+
+					<input name="submit" type="submit" class="btn btn-success btn-lg fullWidth" value="Sign up for the newsletter">
+
+					<p class="center">We won't send you spam. Unsubscribe at any time.</p>
+
+	    		</div>
+
+	    	</div>
+
+    	</div>
+
+    </div>
+
+	<!-- ABOUT US DIV -->
+    <div class="container aboutDiv">
+    	
+    	<div class="row">
+    		
+    		<div class="col-md-12">
+    			
+    			<h2>Our Services</h2>
+
+				<p class="lead">At Pacificano we carefully calculate the carbon emissions produced as a result of our web server being on 24 hours a day. We then offset these emissions by planting trees at Tree Park in Bondi. As the trees we plant are young, and will absorb much more carbon as they grow, we will, in the long term, be a carbon-positive company.</p>
+
+				<p class="lead">We can therefore have a more positive environmental impact than companies that use renewable energy, as well as providing a better value for money service. Read more about our eco credentials.</p>
+
+    		</div>
+
+    	</div>
+
+    </div>
+
+    <!-- OUR SERVICES DIV -->
+    <div class="container-fluid servicesDiv splashDiv">
+    	
+    	<div class="container">
+    		
+    		<div class="row">
+    			
+    			<div class="col-md-4">
+
+    				<div class="whitebgServices center">
+
+    					<img src="images/01.png">
+	    				<h2>Hosting</h2>
+	    				<p>Connect directly with your customers. Work with them one on one.</p>
+	    				<input name="submit" type="submit" class="btn btn-success btn-lg" value="Learn more">
+
+    				</div>
+
+    			</div>
+    			<div class="col-md-4">
+
+    				<div class="whitebgServices center">
+    				
+    					<img src="images/02.png">
+	    				<h2>Domains</h2>
+	    				<p>Reach farther than you thought before. It’s easier than it seems.</p>
+	    				<input name="submit" type="submit" class="btn btn-success btn-lg" value="Learn more">
+
+    				</div>
+
+    			</div>
+    			<div class="col-md-4">
+
+    				<div class="whitebgServices center">
+    				
+    					<img src="images/03.png">
+	    				<h2>Wordpress</h2>
+	    				<p>Make a bond that lasts a lifetime. We’ll show you how it’s done.</p>
+	    				<input name="submit" type="submit" class="btn btn-success btn-lg" value="Learn more">
+
+					</div>
+
+    			</div>
+
+    		</div>
+
+    		<br /><br />
+
+    		<div class="row">
+    			
+    			<div class="col-md-4">
+
+    				<div class="whitebgServices center">
+    				
+    					<img src="images/04.png">
+	    				<h2>Mobile/Web Apps</h2>
+	    				<p>Simplicity gives way to creativity. We make it easy as cake.</p>
+	    				<input name="submit" type="submit" class="btn btn-success btn-lg" value="Learn more">
+
+    				</div>
+
+    			</div>
+    			<div class="col-md-4">
+
+	    			<div class="whitebgServices center">
+    				
+    					<img src="images/05.png">
+	    				<h2>Javascript</h2>
+	    				<p>Never worry about another deadline. Really. We’re that good.</p>
+	    				<input name="submit" type="submit" class="btn btn-success btn-lg" value="Learn more">
+
+    				</div>
+
+    			</div>
+    			<div class="col-md-4">
+
+    				<div class="whitebgServices center">
+    				
+    					<img src="images/06.png">
+	    				<h2>SEO</h2>
+	    				<p>We go where no man has gone before. It’s about the small stuff.</p>
+	    				<input name="submit" type="submit" class="btn btn-success btn-lg" value="Learn more">
+
+    				</div>
+
+    			</div>
+
+    		</div>
+
+    	</div>
+
+    </div>
+
+    <!-- TESTIMONIALS DIV -->
+    <div class="container-fluid testimonialDiv white">
+
+	    <div class="container">
+	    	
+	    	<div class="row">
+	    		
+	    		<div class="col-md-12">
+	    			
+	    			<h2>Even when the website gets a bit complicated, there's always the email things where Jonny as well as other developers are actively helping each other. This website is not to be missed.</h2>
+
+					<p class="lead">-Billy Trejo</p>
+
+	    		</div>
+
+	    	</div>
+
+	    </div>
+
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<!-- WINDOW HEIGHT FOR DIVS -->
+    <script type="text/javascript">
+
+    	$(".splashDiv").css("min-height", $(window).height());
+
+    </script>
+
+  </body>
+</html>
