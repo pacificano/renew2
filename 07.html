@@ -37,6 +37,20 @@
 			padding-bottom: 80px;
 		}
 
+		.blogDiv {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		.blogDiv h1, .blogDiv h5, .blogDiv p {
+			padding-bottom: 20px;
+			word-wrap: break-word;
+		}
+
+		hr {
+			padding-bottom: 20px;
+		}
+
 		.testimonialDiv {
 			background-color: lightblue;
 			padding-top: 80px;
@@ -179,7 +193,7 @@
 
 					<input name="submit" type="submit" class="btn btn-success btn-lg fullWidth" value="Sign up for the newsletter">
 
-					<p class="center">We won't send you spam. Unsubscribe at any time.</p>
+					<p class="center"><small>We won't send you spam. Unsubscribe at any time.</small></p>
 
 	    		</div>
 
@@ -322,6 +336,48 @@
 
     </div>
 
+    <!-- BLOG -->
+    <div class="container blogDiv">
+    	
+    	<div class="row">
+    		
+    		<div class="col-md-7 blogDetails">
+    			
+    			<h1>Learn JavaScript Essentials for all skill levels by Eric Elliott</h1>
+
+    			<h5>July 24, 2015 / 16 Comments / Posted in: Uncategorized</h5>
+
+    			<p class="lead">
+	    			Newbies: “JavaScript for Cats”, Max Ogden (free website)<br/>
+					“Eloquent JavaScript: Second Edition”, Marijn Haverbeke (book with free online edition)<br/>
+					“JavaScript: The Good Parts”, Douglas Crockford (book)<br/>
+					“Learn JavaScript with Eric Elliott”, disclaimer: I’m Eric Elliott (online courses)<br/>
+					“Programming JavaScript Applications”, Eric Elliott (book, free online, print & ebooks available)<br/>
+					“The Two Pillars of JavaScript Part 1” on Prototypal OO, Eric Elliott (article, free)<br/>
+					“The Two Pillars of JavaScript Part 2” on Functional Programming (article, free)<br/>
+					“JavaScript: The Definitive Guide”, David Flanagan<br/>
+					“Delivering the Goods” by Paul Irish (video)
+				</p>
+
+				<hr>
+
+				<h1>Reddit: Good projects while learning Javascript</h1>
+
+    			<h5>July 16, 2015 / No Comments / Posted in: Courses, Tips</h5>
+
+    			<p class="lead">
+	    			https://www.reddit.com/r/learnjavascript/comments/3ety2r/good_projects_while_learning_javascript/
+
+					http://eloquentjavascript.net/
+					https://github.com/getify/You-Dont-Know-JS
+				</p>
+
+    		</div>
+    		<div class="col-md-4 col-md-offset-1 blogExtras" style="background-color: lightblue;">asdf</div>
+
+    	</div>
+    </div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -332,6 +388,7 @@
     <script type="text/javascript">
 
     	$(".splashDiv").css("min-height", $(window).height());
+    	$(".blogExtras").css("min-height", $(".blogDetails").height());
 
     </script>
 
