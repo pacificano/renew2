@@ -131,6 +131,18 @@
 			margin-bottom: 40px;
 		}
 
+		@media (max-width: 1200px) {
+		  h1 {
+		    font-size: 380%;
+		  }
+		}
+
+		@media (max-width: 520px) {
+		  h1 {
+		    font-size: 280%;
+		  }
+		}
+
     </style>
 
   </head>
@@ -347,6 +359,8 @@
 
 	<!-- WINDOW HEIGHT FOR DIVS -->
     <script type="text/javascript">
+
+    	alert($(window).width());
 
     	$(".splashDiv").css("min-height", $(window).height());
     	$(".blogExtras").css("min-height", $(".blogDetails").height());
