@@ -1,0 +1,227 @@
+/* DIV STYLES */
+	/* ABOUT DIV */
+		.aboutDiv {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+	/* BLOG DIV */
+		.blogDiv {
+			padding-top: 80px;
+			padding-bottom: 20px;
+		}
+
+		.blogDiv h1, .blogDiv h5, .blogDiv p {
+			padding-bottom: 20px;
+			word-wrap: break-word;
+		}
+
+	/* CONTACT DIV */
+		.contactDiv {
+			background-image: url("../splash-sunset.JPG");
+			background-size: cover;
+			padding-top: 0px;
+		}
+
+		.contactDiv h3 {
+			padding-bottom: 20px;
+		}
+
+		.contactDiv a {
+			color: white;
+		}
+
+		.contactDiv .glyphicon {
+			position: relative;
+			top: 3px;
+			padding-right: 5px;
+		}		
+
+		.contactDivLeft {
+			padding-top: 130px;
+		}	
+
+		.contactDivRight {
+			padding-top: 170px; 
+			color: white;
+		}
+
+		.contactDivRight select {
+			margin-bottom: 10px; 
+			width: 100%; 
+			font-size: 16px;
+		}
+
+		.contactDivRight textarea {
+			width: 100%; 
+			color: black; 
+			margin-bottom: 10px;
+		}
+
+		.contactButton {
+			background-color: #8DCBB4; 
+			color: #222E41; 
+			border: none; 
+			font-weight: bold; 
+			width: 100%;
+		}
+
+	/* LANDING DIV */
+		.landingDiv {
+			background-image: url("../splash-oceanRocks.JPG");
+			background-size: cover;
+			padding-top: 0px;
+		}
+
+		.landingDivLeft {
+			padding-top: 130px;
+		}
+
+	/* NEWSLETTER DIV */
+		.newsletterDiv {
+			padding: 170px 30px 0px 30px;
+			background-color: rgba(34,46,65, 0.8);
+			padding-top: 170px;
+			color: white;
+		}
+
+		.newsletterDiv p, .contactDivRight p {
+			font-size: 13pt;
+		}
+
+		.newsletterDiv span, .contactDivRight span {
+			color:#8DCBB4;
+		}
+
+		.newsletterDiv label, .contactDivRight label {
+			font-size: 9pt;
+			margin: 0px;
+		}
+
+		.newsletterDiv input, .contactDivRight input {
+			width: 100%; 
+			color: black;
+		}
+
+		input.newsletterName, input.contactName {
+			margin-bottom: 10px;
+		}
+
+		input.newsletterEmail, input.contactEmail {
+			margin-bottom: 20px;
+		}
+
+		input.newsletterButton {
+			background-color: #8DCBB4; 
+			color: #222E41; 
+			border: none; 
+			font-weight: bold; 
+			width: 100%;
+		}
+
+		p.newsletterTextSmall {
+			text-align: center;
+			font-size: 7pt; 
+			padding-top: 10px;
+		}
+
+	/* SERVICES DIV */
+		.servicesDiv {
+			background-image: url("../splash-pinkSky.JPG");
+			background-size: cover;
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+		.whitebgServices {
+			background-color: white;
+			opacity: 0.8;
+			border-radius: 10px;
+			padding: 20px;
+			margin: 0px;
+		}
+
+	/* TESTIMONIAL DIV */
+		.testimonialDiv {
+			background-color: lightblue;
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+
+
+
+/* FONTS */
+	h1 {
+		font-size: 450%;
+	}
+
+	hr {
+		padding-bottom: 20px;
+	}
+
+
+
+/* BLOG STYLE */
+	.extrasRecentPosts {
+		padding-top: 20px;
+	}
+
+	.extrasArchives, .extrasCategories {
+		padding-top: 30px;
+	}
+
+	.blogExtras p {
+		padding: 0px;
+	}
+
+
+
+/* GENERAL STYLE */
+	.center {
+		text-align: center;
+	}
+
+	.white {
+		color: white;
+	}
+
+	.whitebg {
+		background-color: white;
+		opacity: 0.9;
+		border-radius: 20px;
+	}
+
+	.fullWidth {
+		width: 100%;
+	}
+
+	.dropShadow {
+		text-shadow: 0px 0px 10px black;
+	}
+
+	.marginBottom {
+		margin-bottom: 40px;
+	}
+
+
+
+/* MEDIA QUERIES */
+	@media (max-width: 1200px) {
+	  h1 {
+	    font-size: 380%;
+	  }
+	}
+
+	@media (max-width: 520px) {
+	  h1 {
+	    font-size: 280%;
+	  }
+	}
+
+
+
+/* IMAGES */
+	.logoImg {
+		position: relative;
+		top: -1px;
+	}
