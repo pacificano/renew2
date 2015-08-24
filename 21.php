@@ -1,3 +1,64 @@
+<?php  
+
+	if ($_POST["submit"]) {
+
+		$result = '<div class="alert alert-success" style="position; absolute;">Form submitted</div>';
+
+		if (!$_POST['name']) {
+
+			$error = 'Please enter your name<br />';
+
+		}
+
+		if (!$_POST['email']) {
+
+			$error .= 'Please enter your email address<br />';
+			// $error .= is the same as $error = $error +
+			
+		}
+
+		if (!$_POST['comment']) {
+
+			$error .= 'Please enter your comment<br />';
+			// $error .= is the same as $error = $error +
+			
+		}
+
+		if ($_POST['email'] !="" AND !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) { 
+		   // if email is filled in BUT doesn't equal a valid email address
+
+		    $error .= 'Please enter a valid email address';
+		
+		}
+
+		if ($error) {
+
+			$result = '<div class="alert alert-danger"><strong>There were error[s] in your form:<br />'.$error.'</strong></div>';
+		
+		} else {
+
+			if (mail("hello@pacificano.com", "Comment from website!", "Name: ".$_POST['name']."
+
+Email: ".$_POST['email']."
+
+Query: ".$_POST['query']."
+
+Comment: ".$_POST['comment'])) {
+
+					$result = '<div class="alert alert-success"><strong>Thank you!</strong><br />We\'ll be in touch.</div>';
+			
+				} else {
+
+					$result = '<div class="alert alert-danger" style="position; absolute;">Sorry, there was an error sending your message. Please try again later.</div>';
+				
+				}
+
+		}
+
+	}
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -219,10 +280,10 @@
 						<p class="lead" style="font-size: 13pt;">Find out how to grow your business online while helping the environment.<br/><span style="color:#8DCBB4;">Subscribe to our newsletter.</span></p>
 
 						<label for="mce-FNAME" style="font-size: 9pt; margin: 0px;">Your first name</label>
-						<input type="text" value="" name="FNAME" class="" id="mce-FNAME" style="width: 100%; color: black;"><br/><br/>
+						<input type="text" value="" name="FNAME" class="" id="mce-FNAME" style="width: 100%; color: black; margin-bottom: 10px;">
 
 						<label for="mce-EMAIL" style="font-size: 9pt; margin: 0px;">Your email address</label>
-						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="width: 100%; color: black;"><br/><br/>
+						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="width: 100%; color: black; margin-bottom: 20px;">
 
 						<div id="mce-responses" class="clear">
 							<div class="response" id="mce-error-response" style="display:none"></div>
@@ -232,7 +293,7 @@
 						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 					    <div style="position: absolute; left: -5000px;"><input type="text" name="b_9e3e430d9b1934531b447d0aa_5658fa2591" tabindex="-1" value=""></div>
 
-					    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background-color: #8DCBB4; color: #222E41; border: none; font-weight: bold; width: 100%;"><br />
+					    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background-color: #8DCBB4; color: #222E41; border: none; font-weight: bold; width: 100%;">
 
 						<p style="text-align: center; font-size: 7pt; padding-top: 10px;">We will never send you spam or share your information.<br /> You can unsubscribe at any time.</p>
 
@@ -375,27 +436,33 @@
     			<!-- Contact Form -->
 	    		<div class="col-md-3 col-md-offset-3 newsletterDiv" style="padding-top: 170px; color: white;">
 
-	    			<form>
+    				<?php 
+
+						echo $result;
+
+					?>
+
+	    			<form method="post" action="21.php#contactForm" id="contactForm">
 
 						<p class="lead" style="font-size: 13pt;">Having a question for us?<br/><span style="color:#8DCBB4;">Shoot us a message now!</span></p>
 
-						<label for="mce-FNAME" style="font-size: 9pt; margin: 0px;">Your first name</label>
-						<input type="text" value="" name="FNAME" class="" id="mce-FNAME" style="width: 100%; color: black;"><br/><br/>
+						<label for="name" style="font-size: 9pt; margin: 0px;">Your first name</label>
+						<input type="text" name="name" style="width: 100%; color: black; margin-bottom: 10px;" value="<?php echo $_POST['name']; ?>">
 
-						<label for="mce-EMAIL" style="font-size: 9pt; margin: 0px;">Your email address</label>
-						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="width: 100%; color: black;"><br/><br/> 
+						<label for="email" style="font-size: 9pt; margin: 0px;">Your email address</label>
+						<input type="email" name="email" style="width: 100%; color: black; margin-bottom: 10px;" value="<?php echo $_POST['email']; ?>"> 
 
-						<label for="mce-EMAIL" style="font-size: 9pt; margin: 0px;">How can we help you?</label>
-						<select>
+						<label for="query" style="font-size: 9pt; margin: 0px;">How can we help you?</label>
+						<select name="query" style="margin-bottom: 10px; width: 100%; font-size: 16px;">
 							<option>Just saying 'hi'</option>
 							<option>A question about your services</option>
 							<option>I'd like to hire you</option>
-						</select><br /><br />
+						</select>
 
-						<label for="mce-EMAIL" style="font-size: 9pt; margin: 0px;">Your message</label>
-						<textarea cols="40" rows="5" style="width: 100%; color: black;"></textarea><br/><br/> 
+						<label for="comment" style="font-size: 9pt; margin: 0px;">Your message</label>
+						<textarea name="comment" cols="40" rows="5" style="width: 100%; color: black; margin-bottom: 10px;"><?php echo $_POST['comment']; ?></textarea> 
 
-					    <input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" class="button" style="background-color: #8DCBB4; color: #222E41; border: none; font-weight: bold; width: 100%;">
+					    <input type="submit" name="submit" value="Send" style="background-color: #8DCBB4; color: #222E41; border: none; font-weight: bold; width: 100%;">
 
 					</form>
 
