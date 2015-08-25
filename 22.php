@@ -299,7 +299,7 @@ Comment: ".$_POST['comment'])) {
     			<div class="col-md-6 white contactDivLeft">
     				
     				<h1 class="dropShadow">Contact Us</h1>
-					<h3 class="dropShadow">Feel free to email, tweet, or fork us.</h3>
+					<h3 class="dropShadow">Feel free to email, tweet, or view our code.</h3>
 
 					<p class="lead dropShadow"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:hello@pacificano.com">hello@pacificano.com</a></p>
 					<p class="lead dropShadow"><span class="glyphicon glyphicon-text-width" aria-hidden="true"></span> <a href="http://www.twitter.com/pacificano_au">http://www.twitter.com/pacificano_au</a></p>
