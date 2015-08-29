@@ -70,6 +70,7 @@
 		.landingDiv {
 			background-image: url("../splash-oceanRocks.JPG");
 			background-size: cover;
+			background-position: center;
 			padding-top: 0px;
 		}
 
@@ -81,7 +82,6 @@
 		.newsletterDiv {
 			padding: 170px 30px 0px 30px;
 			background-color: rgba(34,46,65, 0.8);
-			padding-top: 170px;
 			color: white;
 		}
 
@@ -210,11 +210,20 @@
 	  h1 {
 	    font-size: 380%;
 	  }
+	  /*.newsletterDiv {
+	  	padding-top: 30px;
+	  	padding-bottom: 0px;
+	  	margin-top: 60px;
+	  	margin-bottom: 0px;
+	  }*/
 	}
 
 	@media (max-width: 520px) {
 	  h1 {
 	    font-size: 280%;
+	  }
+	  .newsletterDiv {
+	  	padding-top: 30px;
 	  }
 	}
 
