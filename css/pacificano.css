@@ -203,6 +203,17 @@
 		margin-bottom: 40px;
 	}
 
+/* IMAGES */
+	.logoImg {
+		position: relative;
+		top: -1px;
+		height: 40px;
+	}
+	#navBarFix li a {
+		padding-top: 22px;
+		height: 63px;
+	}
+
 
 
 /* MEDIA QUERIES */
@@ -227,10 +238,10 @@
 	  }
 	}
 
-
-
-/* IMAGES */
-	.logoImg {
-		position: relative;
-		top: -1px;
+	@media (max-width: 760px){
+		.logoImg {
+			position: relative;
+			top: -1px;
+			height: 30px;
+		}
 	}
