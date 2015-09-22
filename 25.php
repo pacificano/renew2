@@ -1,64 +1,3 @@
-<?php  
-
-	if ($_POST["submit"]) {
-
-		$result = '<div class="alert alert-success" style="position; absolute;">Form submitted</div>';
-
-		if (!$_POST['name']) {
-
-			$error = 'Please enter your name<br />';
-
-		}
-
-		if (!$_POST['email']) {
-
-			$error .= 'Please enter your email address<br />';
-			// $error .= is the same as $error = $error +
-			
-		}
-
-		if (!$_POST['comment']) {
-
-			$error .= 'Please enter your comment<br />';
-			// $error .= is the same as $error = $error +
-			
-		}
-
-		if ($_POST['email'] !="" AND !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) { 
-		   // if email is filled in BUT doesn't equal a valid email address
-
-		    $error .= 'Please enter a valid email address';
-		
-		}
-
-		if ($error) {
-
-			$result = '<div class="alert alert-danger"><strong>There were error[s] in your form:<br />'.$error.'</strong></div>';
-		
-		} else {
-
-			if (mail("hello@pacificano.com", "Comment from website!", "Name: ".$_POST['name']."
-
-Email: ".$_POST['email']."
-
-Query: ".$_POST['query']."
-
-Comment: ".$_POST['comment'])) {
-
-					$result = '<div class="alert alert-success"><strong>Thank you!</strong><br />We\'ll be in touch.</div>';
-			
-				} else {
-
-					$result = '<div class="alert alert-danger" style="position; absolute;">Sorry, there was an error sending your message. Please try again later.</div>';
-				
-				}
-
-		}
-
-	}
-	
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -70,6 +9,9 @@ Comment: ".$_POST['comment'])) {
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
 
 	<!-- CSS -->
     <link href="css/pacificano.css" rel="stylesheet">
@@ -302,9 +244,9 @@ Comment: ".$_POST['comment'])) {
     				<h1 class="dropShadow">Contact Us</h1>
 					<h3 class="dropShadow">Feel free to email, tweet, or view our code.</h3>
 
-					<p class="lead dropShadow"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:hello@pacificano.com">hello@pacificano.com</a></p>
-					<p class="lead dropShadow"><span class="glyphicon glyphicon-text-width" aria-hidden="true"></span> <a href="http://www.twitter.com/pacificano_au">http://www.twitter.com/pacificano_au</a></p>
-					<p class="lead dropShadow"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> <a href="http://www.github.com/pacificano">http://www.github.com/pacificano</a></p>
+					<p class="lead dropShadow"><i class="fa fa-envelope"></i> <a href="mailto:hello@pacificano.com">hello@pacificano.com</a></p>
+					<p class="lead dropShadow"><i class="fa fa-twitter"></i> <a href="http://www.twitter.com/pacificano_au">http://www.twitter.com/pacificano_au</a></p>
+					<p class="lead dropShadow"><i class="fa fa-github"></i> <a href="http://www.github.com/pacificano">http://www.github.com/pacificano</a></p>
 
     			</div>
 
